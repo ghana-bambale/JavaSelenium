@@ -3,3 +3,4 @@ This project should include all Java based automation projects with different ap
 
 ## Where to start
 Beginners can start form BasicSeleniumJava project, you can find the readme file for each project in the project directory separately.
+JavaSeleniumPOM is as the name suggest a project with Page object model.
