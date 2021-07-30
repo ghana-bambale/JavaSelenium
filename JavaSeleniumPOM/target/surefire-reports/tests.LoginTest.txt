@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: tests.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 27.308 s <<< FAILURE! - in tests.LoginTest
+credentialsTest(tests.LoginTest)  Time elapsed: 0.044 s  <<< ERROR!
+java.lang.NullPointerException
+	at tests.LoginTest.credentialsTest(LoginTest.java:23)
+

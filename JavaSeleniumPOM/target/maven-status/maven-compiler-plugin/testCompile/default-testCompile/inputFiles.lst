@@ -1,2 +1,3 @@
-/home/thebadcoder/TestWorkspace/JavaSeleniumPOM/src/test/java/Testbot/AppTest.java
-/home/thebadcoder/TestWorkspace/JavaSeleniumPOM/src/test/java/Testbot/GoogleTest.java
+/home/thebadcoder/TestWorkspace/JavaSelenium/JavaSeleniumPOM/src/test/java/Testbot/pages/Login.java
+/home/thebadcoder/TestWorkspace/JavaSelenium/JavaSeleniumPOM/src/test/java/Testbot/tests/LoginTest.java
+/home/thebadcoder/TestWorkspace/JavaSelenium/JavaSeleniumPOM/src/test/java/Testbot/pages/Home.java

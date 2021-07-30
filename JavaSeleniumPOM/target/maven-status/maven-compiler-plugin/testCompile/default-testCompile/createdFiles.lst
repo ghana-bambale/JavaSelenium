@@ -1,2 +1,2 @@
-Testbot/AppTest.class
-Testbot/GoogleTest.class
+tests/LoginTest.class
+pages/Login.class
