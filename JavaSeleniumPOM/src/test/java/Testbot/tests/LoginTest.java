@@ -1,14 +1,15 @@
 package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.junit.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 // Import all required pages for Login
 import pages.Login;
 
 public class LoginTest{
     WebDriver driver;
     Login flipkartSignIn;
-    @Test
+    @BeforeTest
     public void setup(){
         System.setProperty("webdriver.gecko.driver","/home/thebadcoder/TestWorkspace/drivers/geckodriver");
         driver = new FirefoxDriver();
@@ -17,7 +18,7 @@ public class LoginTest{
         driver.manage().window().maximize();
     }
     
-    @Test
+    @Test(priority=0)
     public void credentialsTest(){
         flipkartSignIn = new Login(driver);
         flipkartSignIn.fillUsername("dummyuser");
