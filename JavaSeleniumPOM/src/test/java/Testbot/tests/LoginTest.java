@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
 // Import all required pages for Login
 import pages.Login;
 
@@ -26,8 +27,8 @@ public class LoginTest{
         flipkartSignIn.clickLogin();
     } 
 
-    // @Test
-    // public void tearDown(){
-    //     driver.close();
-    // }
+    @AfterTest
+    public void tearDown(){
+        driver.close();
+    }
 }
