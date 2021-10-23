@@ -9,15 +9,15 @@ import org.testng.annotations.*;
 public class InitTest{
     public static WebDriver driver;
     
-
+    @Parameters({ "url_parameter" })
     @BeforeSuite
-    public void setup()
+    public void setup(@Optional("https://jqueryui.com/droppable/") String url_parameter)
     {
         System.setProperty("webdriver.gecko.driver","/home/thebadcoder/TestWorkspace/drivers/geckodriver");
         // WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        String baseURL = "https://www.flipkart.com";
+        String baseURL = url_parameter;
         driver.get(baseURL);
     }
 
@@ -30,7 +30,7 @@ public class InitTest{
     public void exitBrowser()
     {
         System.out.println("Thanks Ghana.");
-        // driver.close();
+        driver.close();
     }
 
 }
