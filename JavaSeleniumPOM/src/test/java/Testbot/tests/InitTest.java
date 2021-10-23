@@ -1,23 +1,29 @@
 package Testbot.tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.*;
 
-// import io.github.bonigarcia.wdm.WebDriverManager;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 // import org.testng.annotations.BeforeSuite;
 // import org.testng.annotations.AfterSuite;
 public class InitTest{
     public static WebDriver driver;
     
-    @Parameters({ "url_parameter" })
+    @Parameters({ "url" })
     @BeforeSuite
-    public void setup(@Optional("https://jqueryui.com/droppable/") String url_parameter)
+    public void setup(@Optional("https://www.flipkart.com/") String urlParam)
     {
-        System.setProperty("webdriver.gecko.driver","/home/thebadcoder/TestWorkspace/drivers/geckodriver");
-        // WebDriverManager.firefoxdriver().setup();
+        // System.setProperty("webdriver.gecko.driver","/home/thebadcoder/TestWorkspace/drivers/geckodriver");
+        
+        WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        String baseURL = url_parameter;
+        String baseURL = urlParam;
         driver.get(baseURL);
     }
 
