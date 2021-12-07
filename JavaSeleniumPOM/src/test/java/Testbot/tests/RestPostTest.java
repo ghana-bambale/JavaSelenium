@@ -1,6 +1,7 @@
 package Testbot.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class RestPostTest{
 		 
 		 String endpoint = "api/users";
 		 HashMap<String, String> headers = headerParameters();
-		 JSONObject payload = postUserPayload();
+		 JSONObject payload = postUserPayload("thebadcoder","coding");
 		 postUserRequest.headers(headers);
 		 postUserRequest.body(payload.toJSONString());
 		 
@@ -40,11 +41,18 @@ public class RestPostTest{
 		return headers;
 	}
 	
-	public JSONObject postUserPayload()
+	public JSONObject postUserPayload(@Optional String userName, String job)
 	{
 		JSONObject payloadUser = new JSONObject();
-		payloadUser.put("name", "thebadcoder");
-		payloadUser.put("job", "coding");
+		if(!userName.isEmpty())
+		{
+			payloadUser.put("name", userName);
+		}
+		if(!job.isEmpty())
+		{
+			payloadUser.put("job", job);
+		}
+		
 		
 		return payloadUser;
 	}
